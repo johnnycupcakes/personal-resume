@@ -16,156 +16,26 @@
   <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
+  <!-- Nav Bar -->
   <div class="container">
-
-    <!-- Header -->
-    <div class="row">
-      <div class="col-md-12">
-        <div class="page-header">
-          <h1>{{Page.name}}</h1>
-          <h3>{{Page.subtitle}}</h3>
-        </div>
+      <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li><a href="/index.html">Home</a></li>
+          <li class="active"><a href="">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+        <h3 class="text-muted"><img class="navImg" src="images/nicround.png">Nicholas Boutte</h3>
       </div>
-    </div>
 
     <!-- Summary -->
     <div class="row">
       <div class="col-md-12">
-        <div class="content">
+        <section class="section">
           <div class="lead">{{Page.summary}}</div>
-        </div>
+        </section>
       </div>
     </div>
-
-       <!-- Skills -->
-    <div class="row">
-      <div class="col-md-12">
-
-        <h3><span class="section icon glyphicon glyphicon-check"></span> Skills</h3>
-        <div class="content" id="skills">
-          <code data-ng-repeat="skill in Page.skills | orderBy:'text'" class="{{skill.level}}">{{skill.text}}</code>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Work Experience -->
-    <div class="row">
-      <div class="col-md-12">
-
-        <h3><span class="section-icon glyphicon glyphicon-briefcase"></span> Experience</h3>
-        <div class="content list-content" id="experience">
-          <div class="row" data-ng-repeat="work in Page.experience">
-            <div class="col-md-8">
-              <h4>{{work.company}} <small>{{work.location}}</small></h4>
-            </div>
-            <div class="col-md-4">
-              <div class="pull-right">
-                <pre class="right-detail">{{work.title}}</pre>
-                <pre class="right-detail">{{work.dates}}</pre>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="clearfix"><!-- --></div>
-              <div class="description">{{work.description}}</div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Projects -->
-    <div class="row">
-      <div class="col-md-12">
-
-        <h3><span class="section-icon glyphicon glyphicon-floppy-disk"></span> Recent Projects</h3>
-        <div class="content list-content" id="projects">
-          <div class="row" data-ng-repeat="project in Page.projects">
-            <div class="col-md-8">
-              <h4 class="pull-left">{{project.title}} <small>{{project.tech}}</small></h4>
-            </div>
-            <div class="col-md-4">
-              <div class="pull-right">
-                <pre class="right-detail">{{project.dates}}</pre>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="clearfix"><!-- --></div>
-              <div class="description">{{project.description}}</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Education -->
-    <div class="row">
-      <div class="col-md-12">
-
-        <h3><span class="section-icon glyphicon glyphicon-book"></span> Education</h3>
-        <div class="content list-content" id="education">
-          <div class="row" data-ng-repeat="place in Page.education">
-            <div class="col-md-8">
-              <h4 class="pull-left">{{place.name}} <small>{{place.degree}}</small></h4>
-            </div>
-            <div class="col-md-4">
-              <div class="pull-right">
-                <pre class="right-detail">{{place.type}}</pre>
-                <pre class="right-detail">{{place.dates}}</pre>
-              </div>
-            </div>
-            <div class="clearfix"><!-- --></div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-       <!-- Unrelated Work Experience -->
-    <div class="row">
-      <div class="col-md-12">
-
-        <h3><span class="section-icon glyphicon glyphicon-list-alt"></span> Unrelated Experience</h3>
-        <div class="content list-content" id="unrelated">
-          <div class="row" data-ng-repeat="work in Page.unrelated">
-            <div class="col-md-8">
-              <h4>{{work.company}} <small>{{work.location}}</small></h4>
-            </div>
-            <div class="col-md-4">
-              <div class="pull-right">
-                <pre class="right-detail">{{work.title}}</pre>
-                <pre class="right-detail">{{work.dates}}</pre>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="clearfix"><!-- --></div>
-              <div class="description">{{work.description}}</div>
-              <ul>
-                <li data-ng-repeat="detail in work.details">{{detail.text}}</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-
-    <!-- Contact info -->
-    <div class="row">
-      <div class="col-md-12">
-        <h3><span class="section-icon glyphicon glyphicon-user"></span> Contact</h3>
-        <div class="content" id="contact">
-          <span data-ng-repeat="contact in Page.contact track by $index">
-            <a href="{{contact.link}}">{{contact.name}}</a>
-            <span data-ng-show="{{$index}} != {{Page.contact.length - 1}}"> /</span>
-          </span>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -193,9 +63,4 @@
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
-
-        <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
-</body>
 </html>

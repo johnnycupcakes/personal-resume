@@ -47,7 +47,7 @@ nicResume.controller('ResumeController', ['$scope',
         /* Configure your information here */
         var Page = {
             'name': 'Nicholas Boutte',
-            'subtitle': 'Full-Stack Web Developer, boba tea and music enthusiast',
+            'subtitle': 'Front-End Web Developer, boba tea and music enthusiast',
             'summary': 'I am a Bay Area native who has been coding for the past 5 years. I originally was introduced to coding through building Personal Web Pages for friends and family. At the time I only had a experience with Front-End, but upon learning RoR through General Assembly I gained a passion for not just Front-End Web Development but Back-End as well.',
 
             /* Start contact block */
@@ -80,7 +80,6 @@ nicResume.controller('ResumeController', ['$scope',
                 { 'text': 'jQuery', 'level': 'ultra' },
                 { 'text': 'CSS', 'level': 'ultra' },
                 { 'text': 'Javascript', 'level': 'high' },
-                { 'text': 'Ruby', 'level': 'high' },
                 { 'text': 'Rails', 'level': 'high' },
                 { 'text': 'Node.js', 'level': 'high' },
                 { 'text': 'Ruby', 'level': 'high' },
@@ -93,6 +92,13 @@ nicResume.controller('ResumeController', ['$scope',
 
             /* Start work experience block */
             'experience': [
+                {
+                    'company': 'Social Source',
+                    'title': 'Front-End Web Developer, UX/UI Designer',
+                    'location': 'Danville, CA',
+                    'dates': 'May 2015',
+                    'description': 'As an Independent Contractor I did the Front-End development as well as UX/UI for their Phew! project. Phew! is a kid-safe browser app. I was in charge of coding the responsive design and CSS of the landing and search result pages.  ',
+                },
                 {
                     'company': 'General Assembly',
                     'title': 'Full-Stack Web Developer',
@@ -109,19 +115,22 @@ nicResume.controller('ResumeController', ['$scope',
                     'title': 'Trendr',
                     'tech': 'ROR, JavaScript, AJAX, jQuery, PostgreSQL, Bootstrap',
                     'dates': '2015',
-                    'description': 'Trendr is a web application that shows the top 10 trends by country. It uses several APIs including Google Trends, Twitter, Itunes, Youtube and Rotten Tomato Box Office to pull relevant data in real-time.| http://worldtrendr.herokuapp.com',
+                    'description': 'Trendr is a web application that shows the top 10 trends by country. It uses several APIs including Google Trends, Twitter, Itunes, Youtube and Rotten Tomato Box Office to pull relevant data in real-time.',
+                    'link': 'http://worldtrendr.herokuapp.com'
                 },
                 {
                     'title': 'Forecast Fits',
                     'tech': 'ROR, AJAX, jQuery, PostgreSQL, SASS',
                     'dates': '2014',
-                    'description': 'Forecast Fits is a website I built that helps users decide what to wear based on a specific city’s forecast. Users are able to submit what they are wearing that day as well as comment on their individual outfit. It uses the Wunderground API to provide relevant weather information. |  http://forecastfits.herokuapp.com',
+                    'description': 'Forecast Fits is a website I built that helps users decide what to wear based on a specific city’s forecast. Users are able to submit what they are wearing that day as well as comment on their individual outfit. It uses the Wunderground API to provide relevant weather information.',
+                    'link': 'http://forecastfits.herokuapp.com'
                 },
                 {
                     'title': 'Photo Finder',
                     'tech': 'Node.js, JavaScript, jQuery, PostgreSQL, Bootstrap',
                     'dates': '2013',
-                    'description': 'My first interactive web application, Photo Finder shows where specific uploaded photos were taken with the Google Maps Geocoding API. | https://github.com/johnnycupcakes/photofinder',
+                    'description': 'My first interactive web application, Photo Finder shows where specific uploaded photos were taken with the Google Maps Geocoding API.',
+                    'link': 'https://github.com/johnnycupcakes/photofinder'
                 },
             ],
             /* End recent projects block */
@@ -171,4 +180,3 @@ nicResume.controller('ResumeController', ['$scope',
         $scope.Page = Page;
     }
 ]);
-

@@ -14,7 +14,14 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 body {
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: #ecf0f1;
+  background-image: url("../images/att_142990291916621.jpeg");
+  background-size: cover;
+}
+.content {
+  background: #ecf0f1;
+  padding: 20px;
+  position: relative;
+  width: 100%;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -54,10 +61,7 @@ body {
 .jumbotron {
   text-align: center;
   border-bottom: 2px solid #e5e5e5;
-  .btn {
-    font-size: 24px;
-    padding: 14px 24px;
-  }
+  margin: 0;
 }
 
 /* Supporting marketing content */
@@ -84,11 +88,29 @@ body {
 
   /* Space out the masthead */
   .header {
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
   }
 
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
   }
+}
+.navImg{
+    border-radius: 25px;
+    width: 55px;
+    height: 55px;
+    zoom: 150%;
+}
+.image { 
+   position: relative; 
+   width: 100%; /* for IE 6 */
+}
+
+h2 { 
+   position: absolute; 
+   top: 200px; 
+   left: 0; 
+   width: 100%;
+   text-align: center; 
 }
