@@ -170,6 +170,12 @@ nicResume.controller('ResumeController', ['$scope',
                     'dates': '2014 - 2015',
                 },
                 {
+                    'name': 'Walden University',
+                    'degree': 'Pursuing BA',
+                    'type': 'Undergraduate',
+                    'dates': '2014 - Current',
+                },
+                {
                     'name': 'CSU Stanislaus',
                     'degree': 'AA Equivalent',
                     'type': 'Undergraduate',
