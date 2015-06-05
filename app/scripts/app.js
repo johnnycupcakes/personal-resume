@@ -35,16 +35,15 @@ angular
         redirectTo: '/'
       });
   });
-  'use strict';
 
-/** Resume App **/
+/** Resume Info **/
 
 var nicResume = angular.module('nicResume', []);
 
 nicResume.controller('ResumeController', ['$scope',
     function($scope) {
 
-        /* Configure your information here */
+        /* Configure information here */
         var Page = {
             'name': 'Nicholas Boutte',
             'subtitle': 'Front-End Web Developer, boba tea and music enthusiast',
@@ -120,7 +119,7 @@ nicResume.controller('ResumeController', ['$scope',
                 },
                 {
                     'title': 'Forecast Fits',
-                    'tech': 'ROR, AJAX, jQuery, PostgreSQL, SASS',
+                    'tech': 'ROR, AJAX, jQuery, PostgreSQL, SASS, Bootstrap',
                     'dates': '2014',
                     'description': 'Forecast Fits is a website I built that helps users decide what to wear based on a specific city’s forecast. Users are able to submit what they are wearing that day as well as comment on their individual outfit. It uses the Wunderground API to provide relevant weather information.',
                     'link': 'http://forecastfits.herokuapp.com'
@@ -186,3 +185,14 @@ nicResume.controller('ResumeController', ['$scope',
         $scope.Page = Page;
     }
 ]);
+nicResume.controller('TabController', function(){
+    this.tab = 1;
+
+    this.setTab = function(newValue){
+      this.tab = newValue;
+    };
+
+    this.isSet = function(tabName){
+      return this.tab === tabName;
+    };
+  });

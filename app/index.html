@@ -43,7 +43,7 @@
       <div class="col-md-12">
       <div class="image">
 
-      <img src="images/panorama.jpeg" style="display: block;" width="1264" height="540" >
+      <img src="images/panorama.jpeg" style="display: block;" width="100%" height="540" >
       
       <h2><span class="section icon glyphicon glyphicon-check"></span> Skills</h2>
 
@@ -60,7 +60,7 @@
       <div class="col-md-12">
        <div class="image">
 
-      <img src="images/panorama.jpeg" style="display: block;" width="1264" height="540" >
+      <img src="images/panorama.jpeg" style="display: block;" width="100%" height="540" >
       
       <h2><span class="section-icon glyphicon glyphicon-briefcase"></span> Experience</h2>
 
@@ -90,39 +90,41 @@
       <div class="col-md-12">
       <div class="image">
 
-      <img src="images/panorama.jpeg" style="display: block;" width="1264" height="540" >
+      <img src="images/panorama.jpeg" style="display: block;" width="100%" height="540" >
       
       <h2><span class="section-icon glyphicon glyphicon-floppy-disk"></span> Recent Projects</h2>
 
 
       </div>
-        <div class="content list-content" id="projects">
+    <div class="content list-content" id="projects">
           <div class="row" data-ng-repeat="project in Page.projects">
             <div class="col-md-8">
-              <h4 class="pull-left">{{project.title}} <small>{{project.tech}}</small></h4>
-            </div>
-            <div class="col-md-4">
-              <div class="pull-right">
-                <pre class="right-detail">{{project.dates}}</pre>
-              </div>
-            </div>
-            <div class="col-md-12">
-              <div class="clearfix"><!-- --></div>
-              <div class="description">{{project.description}}</div>
-              <div class="link"><a href="{{project.link}}">View it here</div>
+              <h3 class="pull-left"><strong><i>{{project.title}}</i></strong>
+      <section ng-controller="TabController as tab">
+        <ul class="nav nav-pills">
+          <li ng-class="{ active: tab.isSet(1) }">
+            <a href class="tab" ng-click="tab.setTab(1)">Description</a></li>
+          <li ng-class="{ active: tab.isSet(2) }">
+            <a href="{{project.link}}">View</li>
+        </ul>
+        <div class="tab" ng-show="tab.isSet(1)">
+          <blockquote>{{project.description}}<br>
+          Tech: {{project.tech}}</blockquote>
+        </div>
+      </section>
             </div>
           </div>
         </div>
-
       </div>
     </div>
+
 
     <!-- Education -->
     <div class="row">
       <div class="col-md-12">
       <div class="image">
 
-      <img src="images/panorama.jpeg" style="display: block;" width="1264" height="540" >
+      <img src="images/panorama.jpeg" style="display: block;" width="100%" height="540" >
       
       <h2><span class="section-icon glyphicon glyphicon-book"></span> Education</h2>
 
@@ -150,7 +152,7 @@
       <div class="col-md-12">
       <div class="image">
 
-      <img src="images/panorama.jpeg" style="display: block;" width="1264" height="540" >
+      <img src="images/panorama.jpeg" style="display: block;" width="100%" height="540" >
       
       <h2><span class="section-icon glyphicon glyphicon-list-alt"></span> Unrelated Experience</h2>
 
