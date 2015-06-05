@@ -31,8 +31,28 @@
     "node": ">=0.10.0"
   },
   "dependencies": {
+    "coffee-script": "^1.9.3",
     "express": "^4.12.4",
     "gzippo": "^0.2.0",
     "morgan": "^1.5.3"
-  }
+  },
+  "version": "1.0.0",
+  "description": "Personal Resume",
+  "main": "Gruntfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnnycupcakes/personal-resume.git"
+  },
+  "author": "Nic Boutte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnnycupcakes/personal-resume/issues"
+  },
+  "homepage": "https://github.com/johnnycupcakes/personal-resume"
 }
